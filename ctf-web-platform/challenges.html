@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desafios | Cyber CTF</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar"><div class="brand">Cyber<span>CTF</span></div><nav><a href="index.html">Home</a><a href="challenges.html">Desafios</a><a href="ranking.html">Ranking</a><a href="admin.html">Admin</a><a href="login.html">Login</a></nav></header>
+  <main class="container">
+    <div class="page-title"><h1>Desafios CTF</h1><p>Escolha um desafio, analise o cenário e envie a flag.</p></div>
+    <div class="filters"><input id="search" placeholder="Buscar desafio..." /><select id="categoryFilter"><option value="">Todas as categorias</option></select></div>
+    <section id="challengeList" class="challenge-grid"></section>
+  </main>
+  <dialog id="challengeDialog" class="modal">
+    <div id="challengeDetail"></div>
+    <form id="flagForm">
+      <input id="flagInput" placeholder="CTF{exemplo_de_flag}" required />
+      <button class="btn primary" type="submit">Enviar Flag</button>
+      <button class="btn secondary" type="button" onclick="document.getElementById('challengeDialog').close()">Fechar</button>
+    </form>
+    <p id="flagResult"></p>
+  </dialog>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/challenges.js"></script>
+</body>
+</html>
